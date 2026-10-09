@@ -1,0 +1,11 @@
+services:
+  routewise:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      # Any application.yml property can be overridden here.
+      ROUTEWISE_CITY_ROWS: "100"
+      ROUTEWISE_CITY_COLS: "100"
+      ROUTEWISE_ETA_TRAININGTRIPS: "6000"
+    restart: unless-stopped
